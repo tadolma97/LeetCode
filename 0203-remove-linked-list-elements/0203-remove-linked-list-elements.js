@@ -16,7 +16,6 @@ var removeElements = function(head, val) {
     let dummy=prev
     let current=head
     while(current!==null){
-        console.log(current.val, prev.val)
         if(current.val===val){
             prev.next=current.next
             current=current.next
