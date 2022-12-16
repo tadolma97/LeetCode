@@ -33,15 +33,16 @@ MyQueue.prototype.pop = function() {
  * @return {number}
  */
 MyQueue.prototype.peek = function() {
-    while(this.stack1.length!==0){
-        this.stack2.push(this.stack1.pop())
-    }
-    var peek=this.stack2.pop()
-    this.stack2.push(peek)
-    while(this.stack2.length!==0){
-        this.stack1.push(this.stack2.pop())
-    }
-    return peek
+    return this.stack1[0]
+    // while(this.stack1.length!==0){
+    //     this.stack2.push(this.stack1.pop())
+    // }
+    // var peek=this.stack2.pop()
+    // this.stack2.push(peek)
+    // while(this.stack2.length!==0){
+    //     this.stack1.push(this.stack2.pop())
+    // }
+    // return peek
 };
 
 /**
