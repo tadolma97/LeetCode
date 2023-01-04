@@ -4,17 +4,16 @@
  * @return {boolean}
  */
 var backspaceCompare = function(s, t) {
-    if(returnStack(s)===returnStack(t)) return true
-    return false
+    return (returnStack(s)===returnStack(t))
 }
 var returnStack=function(s){
     let stack=[]
     for(let i=0; i<s.length;i++){
-        console.log(s[i])
+
         if(s[i]==='#') stack.pop()
         else stack.push(s[i])
     }
-        console.log(stack)
+
     return stack.join('')
 
 }
