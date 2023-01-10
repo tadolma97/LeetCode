@@ -19,7 +19,7 @@ var maxProfit = function(prices) {
             profit.push(difference)
             break
         }
-        console.log(profit,min,i)
+
     }
     if(profit.length===0){
         maxProfit=prices[prices.length-1]-min
