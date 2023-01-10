@@ -5,7 +5,6 @@
 var maxProfit = function(prices) {
     let min=Infinity
     let profit=0
-    let maxProfit=0
     for(let i=0;i<prices.length;i++){
         if(prices[i]<min) min=prices[i]
         else if(prices[i+1]<prices[i]){
