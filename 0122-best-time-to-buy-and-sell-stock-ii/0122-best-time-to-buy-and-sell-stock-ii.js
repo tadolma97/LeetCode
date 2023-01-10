@@ -4,30 +4,20 @@
  */
 var maxProfit = function(prices) {
     let min=Infinity
-    let profit=[]
+    let profit=0
     let maxProfit=0
     for(let i=0;i<prices.length;i++){
         if(prices[i]<min) min=prices[i]
         else if(prices[i+1]<prices[i]){
             let difference=prices[i]-min
-            profit.push(difference)
+            profit+=difference
             min=prices[i+1]
             i=i+1
         }else if(i===prices.length-1){
-
             difference=prices[prices.length-1]-min
-            profit.push(difference)
+            profit+=difference
             break
         }
-
     }
-    if(profit.length===0){
-        maxProfit=prices[prices.length-1]-min
-    }
-    for(let i=0;i<profit.length;i++){
-        
-        maxProfit+=profit[i]
-    }
-    
-    return maxProfit
+    return profit
 };
