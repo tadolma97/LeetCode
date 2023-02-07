@@ -13,7 +13,6 @@ var middleNode = function(head) {
     let count=0
     let secondCount=1
     let dummy=head
-    let second=head
     while(dummy){
         count++
         dummy=dummy.next
@@ -25,11 +24,9 @@ var middleNode = function(head) {
         count=count/2
         count+=1
     }
-    console.log(count)
     while(secondCount!==count){
         secondCount++
-        console.log(second)
-        second=second.next
+        head=head.next
     }
-    return second
+    return head
 };
