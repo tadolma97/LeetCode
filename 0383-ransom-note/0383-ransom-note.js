@@ -6,11 +6,11 @@
 var canConstruct = function(ransomNote, magazine) {
     let object={}
     for(let letter of magazine){
-        if(!(letter in object)){
-            object[letter]=1
-        }else{
-            object[letter]+=1
+        if(!object[letter]){
+            object[letter]=0
         }
+        object[letter]++
+
     }
     for(let letter of ransomNote){
         if(!object[letter]) return false
