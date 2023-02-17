@@ -23,7 +23,7 @@ var minDiffInBST = function(root) {
     values=values.sort(function(a, b){return a - b})
 
     let min=Infinity
-    for(let i=0;i<values.length-1;i++){
+    for(let i=0;i<values.length;i++){
         let difference=values[i+1]-values[i]
         if (difference<min) min=difference
     }
