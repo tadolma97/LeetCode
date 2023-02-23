@@ -9,7 +9,7 @@ var shipWithinDays = function(weights, days) {
     let right = weights.reduce((a,b) => a + b); //total weight
     while (left < right){
         let mid = Math.floor((left + right) / 2);//to find a median capacity
-        console.log(mid)
+
         let daysNeeded = 1;
         let currentWeight = 0;
         for( i = 0; i < weights.length; i++){
@@ -19,9 +19,12 @@ var shipWithinDays = function(weights, days) {
             }
             else currentWeight += weights[i];
         }
+        console.log(left, right, mid,"hi")
         if(daysNeeded > days) left = mid + 1;
         else right = mid;
+        console.log(left, right, mid)
     }
-    return left;
+    
+    return right;
 };
 
