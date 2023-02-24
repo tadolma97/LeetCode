@@ -10,7 +10,6 @@ var maximumUnits = function(boxTypes, truckSize) {
             array.push(boxTypes[i][1])
     }
     array=array.sort((a,b)=>b-a)
-    console.log(array)
     let total=0
     if(truckSize>array.length) return array.reduce((a,b)=>a+b)
     for(let i=0;i<truckSize;i++){
