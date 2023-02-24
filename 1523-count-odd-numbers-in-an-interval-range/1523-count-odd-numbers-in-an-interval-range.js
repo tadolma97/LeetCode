@@ -9,7 +9,7 @@ var countOdds = function(low, high) {
     else{
         if(low%2===1&& high%2===1){
             return range/2+.5
-        }else if(low%2===0&& high%2===0){
+        }else{
             return range/2-.5
         }
     }
