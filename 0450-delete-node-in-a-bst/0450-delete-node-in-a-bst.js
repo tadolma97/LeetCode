@@ -15,7 +15,7 @@ var deleteNode = function(root, key) {
     const fakeHead = new TreeNode(null, root, null)
     let curr=root
     let prev=fakeHead
-    if(root===key) return null
+
     while(curr && curr.val!==key){
         prev=curr
         if(curr.val>key){
