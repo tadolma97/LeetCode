@@ -8,7 +8,6 @@ var strStr = function(haystack, needle) {
     let i=0
     let count=0
     while(i<=haystack.length){
-        console.log(i, count, needle.length)
         if(count===needle.length) return i-needle.length
         else if(haystack[i]===needle[j]){
             j++
