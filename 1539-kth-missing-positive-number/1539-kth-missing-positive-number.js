@@ -13,7 +13,6 @@ var findKthPositive = function(arr, k) {
         }
         count++
     }
-    console.log(missingInt)
     let length=arr.length-1
     if(missingInt[k-1]) return missingInt[k-1]
     else return arr[length]+k-missingInt.length
