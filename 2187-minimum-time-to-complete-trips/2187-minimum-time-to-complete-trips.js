@@ -12,7 +12,6 @@ var minimumTime = function(time, totalTrips) {
     while(left<right){
         let mid=Math.floor((left+right)/2)
         let midTime=findTime(time, mid)
-        console.log(left, right, mid, midTime)
         if (totalTrips> midTime) left=mid+1
         else right=mid
     }
