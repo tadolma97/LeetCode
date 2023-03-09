@@ -14,7 +14,6 @@ var findRestaurant = function(list1, list2) {
         
     let arr=Object.values(object)
     let min=Math.min(...arr)
-    console.log(object, arr, min)
     return Object.keys(object).filter(key => object[key] === min)
     
 };
