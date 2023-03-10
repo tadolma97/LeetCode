@@ -14,12 +14,12 @@
 var guessNumber = function(n) {
     let min=1
     let max=n
-    while(min<max){
-        let mid=Math.min((min+max)/2)
-        if(guess(mid)===-1) max=mid
-        else if(guess(mid)===1) min=mid
+    while(min<=max){
+        let mid=Math.floor((min+max)/2)
+        console.log(mid)
+        if(guess(mid)===-1) max=mid-1
+        else if(guess(mid)===1) min=mid+1
         else return mid
     }
-    return min
 
 };
