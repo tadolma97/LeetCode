@@ -18,8 +18,6 @@ var rotate = function(nums, k) {
         k=k%nums.length
     }
     let start=nums.length-k
-
-    let newArray=[]
     let splice1=nums.splice(start,nums.length-1)
     let splice2=nums.splice(0, start)
     nums.unshift(...splice1,...splice2)
