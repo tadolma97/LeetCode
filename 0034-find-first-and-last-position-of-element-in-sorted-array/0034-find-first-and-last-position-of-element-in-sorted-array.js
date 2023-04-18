@@ -8,8 +8,6 @@ var searchRange = function(nums, target) {
     let right=nums.length-1
     let answer=[]
     if(nums.length===1 && nums[0]===target) return [0,0]
-    // let set=new Set(nums)
-    // if (!set.has(target)) return [-1,-1]
     while(left<=right){
         let mid=Math.floor((left+right)/2)
         console.log(left, right)
