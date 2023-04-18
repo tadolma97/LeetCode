@@ -47,6 +47,5 @@ var isValid = function(s) {
             }else return false
         }
     }
-    if(old.length===0) return true
-    else return false
+    return old.length===0
 };
