@@ -21,12 +21,14 @@ var mergeAlternately = function(word1, word2) {
     let one=0
     let two=0
     let result=""
-    while(word1.length>one || word2.length>two){
-        if(one<word1.length){
+    let length1=word1.length
+    let length2=word2.length
+    while(length1>one || length2>two){
+        if(one<length1){
             result=result.concat(word1[one])
             one++
         }
-        if(two<word2.length){
+        if(two<length2){
             result=result.concat(word2[two])
             two++
         }
