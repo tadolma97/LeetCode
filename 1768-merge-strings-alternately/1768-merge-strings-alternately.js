@@ -25,11 +25,11 @@ var mergeAlternately = function(word1, word2) {
     let length2=word2.length
     while(length1>one || length2>two){
         if(one<length1){
-            result=result.concat(word1[one])
+            result+=word1[one]
             one++
         }
         if(two<length2){
-            result=result.concat(word2[two])
+            result+=word2[two]
             two++
         }
     }
