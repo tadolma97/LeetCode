@@ -13,7 +13,6 @@ var repeatedSubstringPattern = function(s) {
         }
     }
     return false
-
 };
 
 function chunk(str, size) {
