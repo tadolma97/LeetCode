@@ -17,8 +17,7 @@ var helper=function(s, left, right, count){
             return helper(s, left, right, count)
     }else {
         count++
-        if(helper(s, left+1, right, count) || helper(s, left, right-1, count)) return true
-        else return false
+        return (helper(s, left+1, right, count) || helper(s, left, right-1, count))
     }
 
 }
