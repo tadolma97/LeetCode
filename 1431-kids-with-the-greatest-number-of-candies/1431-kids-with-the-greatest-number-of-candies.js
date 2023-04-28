@@ -5,8 +5,8 @@
  */
 var kidsWithCandies = function(candies, extraCandies) {
     let answer=[]
+    let maxNumber=Math.max(...candies)
     for(let i=0; i<candies.length; i++){
-        let maxNumber=Math.max(...candies)
         let temp=candies[i]+extraCandies
         if(temp>=maxNumber) answer.push(true)
         else answer.push(false)
