@@ -3,18 +3,17 @@
  * @return {number}
  */
 var lengthOfLongestSubstring = function(s) {
-    let count=0
-    let substring=''
+    let hold=new Set()
+    let left=0
+    let max=0
     for(let i=0; i<s.length;i++){
-       if(substring.includes(s[i])){
-           const index=substring.indexOf(s[i])+1
-           substring=substring.slice(index)+s[i]
-       }
-        else{
-            substring+=s[i]
-
+        while(hold.has(s[i])){
+            hold.delete(s[left])
+            left++
         }
-        count=Math.max(count, substring.length)
+        hold.add(s[i])
+        console.log(left)
+        max=Math.max(max, i-left+1)
     }
-    return count
-};
+    return max
+}
