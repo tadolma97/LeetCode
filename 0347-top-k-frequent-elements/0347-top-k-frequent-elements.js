@@ -10,6 +10,5 @@ var topKFrequent = function(nums, k) {
     })
     let mapSort1=new Map([...newMap1.entries()].sort((a,b) => b[1] - a[1]))
     let answer=[...mapSort1.keys()]
-    console.log(answer)
     return answer.splice(0,k)
 };
