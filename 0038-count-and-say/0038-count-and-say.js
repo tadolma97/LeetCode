@@ -14,7 +14,6 @@ var countAndSay = function(n) {
 };
 var toArray=function(n){
     n=n.split('')
-    console.log(n)
     let hold=[]
     let count=1
     let current=n[0]
