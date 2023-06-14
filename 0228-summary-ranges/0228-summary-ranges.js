@@ -9,7 +9,6 @@ var summaryRanges = function(nums) {
         let check=nums[i]
         for(let j=i+1; j<=nums.length; j++){
             if(nums[j]!==check+1){
-                console.log(i, j)
             store.push([hold, nums[j-1]])
             i=j-1
             break
