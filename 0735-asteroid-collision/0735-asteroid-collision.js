@@ -5,12 +5,12 @@
 var asteroidCollision = function(asteroids) {
     let stack=[]
     for(let i=0; i<asteroids.length; i++){
-        let current=asteroids[i]
         if(stack.length==0){
-            stack.push(current) 
+            stack.push(asteroids[i]) 
             continue
         }  
         let prev=stack.pop()
+        let current=asteroids[i]
         let sign, otherSign
         if(prev>0) sign=true
         else sign=false
@@ -24,8 +24,7 @@ var asteroidCollision = function(asteroids) {
             stack.push(prev)
             stack.push(current)
         }
-        else{
-            if(Math.abs(prev)===Math.abs(current)){
+        else if(Math.abs(prev)===Math.abs(current)){
                continue
             }
             else if(Math.abs(prev)>Math.abs(current)){
@@ -33,7 +32,7 @@ var asteroidCollision = function(asteroids) {
             }else{
                 i--
             }
-        }
+        
     }
     return stack
 };
