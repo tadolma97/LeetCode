@@ -5,12 +5,12 @@
 var asteroidCollision = function(asteroids) {
     let stack=[]
     for(let i=0; i<asteroids.length; i++){
+        let current=asteroids[i]
         if(stack.length==0){
-            stack.push(asteroids[i]) 
+            stack.push(current) 
             continue
         }  
         let prev=stack.pop()
-        let current=asteroids[i]
         let sign, otherSign
         if(prev>0) sign=true
         else sign=false
