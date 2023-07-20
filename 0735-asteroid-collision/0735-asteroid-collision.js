@@ -10,6 +10,7 @@ var asteroidCollision = function(asteroids) {
             continue
         }  
         let prev=stack.pop()
+        let current=asteroids[i]
         let sign, otherSign
         if(prev>0) sign=true
         else sign=false
@@ -17,17 +18,17 @@ var asteroidCollision = function(asteroids) {
         else otherSign=false
         if(sign==otherSign){
             stack.push(prev)
-            stack.push(asteroids[i])
+            stack.push(current)
         }
         else if(sign===false && otherSign===true){
             stack.push(prev)
-            stack.push(asteroids[i])
+            stack.push(current)
         }
         else{
-            if(Math.abs(prev)===Math.abs(asteroids[i])){
+            if(Math.abs(prev)===Math.abs(current)){
                continue
             }
-            else if(Math.abs(prev)>Math.abs(asteroids[i])){
+            else if(Math.abs(prev)>Math.abs(current)){
                 stack.push(prev)
             }else{
                 i--
