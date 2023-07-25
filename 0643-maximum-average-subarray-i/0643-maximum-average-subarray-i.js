@@ -8,12 +8,11 @@ var findMaxAverage = function(nums, k) {
     for(let i=0;i<k;i++){
         count+=nums[i]
     }
-    let avg=count/k
-    let max=avg
+
+    let max=count
     for(let i=k;i<nums.length; i++){
         count=count-nums[i-k]+nums[i]
-        let avg=count/k
-        if(avg>max) max=avg
+        if(count>max) max=count
     }
-    return max
+    return max/k
 };
