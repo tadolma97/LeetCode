@@ -14,15 +14,15 @@ var removeNthFromEnd = function(head, n) {
     let two=1
     let current=head
     let behind=head
-    // if(!current.next && n===1) return null
     while(current.next){ 
         if(two<=n){
             current=current.next
-            two++
+
         }else{
             current=current.next
             behind=behind.next
         }
+                    two++
     }
     if(two===n) return head.next
     behind.next=behind.next.next
