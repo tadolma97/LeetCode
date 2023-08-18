@@ -17,12 +17,11 @@ var removeNthFromEnd = function(head, n) {
     while(current.next){ 
         if(two<=n){
             current=current.next
-
         }else{
             current=current.next
             behind=behind.next
         }
-                    two++
+        two++
     }
     if(two===n) return head.next
     behind.next=behind.next.next
