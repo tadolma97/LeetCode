@@ -10,10 +10,8 @@ var uniqueOccurrences = function(arr) {
         }
         else frequencyTable[arr[i]]=1
     }
-    let arr2=new Set()
-    for(let val of Object.values(frequencyTable)){
-        if(arr2.has(val)) return false
-        else arr2.add(val)
-    }
-    return true
+    let arr2=new Set(Object.values(frequencyTable)).size
+    let obj=Object.keys(frequencyTable).length
+    if(arr2===obj)return true
+    else return false
 };
